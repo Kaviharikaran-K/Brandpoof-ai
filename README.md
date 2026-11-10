@@ -214,3 +214,17 @@ admin consent.
 Known limitations: visual logo matching is a heuristic that flags low-confidence matches for
 humans; OCR depends on a local Tesseract binary; the external LLM provider is an advisory stub;
 there is no password-reset or email-verification flow.
+
+## Production deployment
+
+- **Frontend (Vercel)** — project root `frontend/`. Set env var `BACKEND_URL` to the Render
+  backend URL; Next.js rewrites proxy `/api/*` to the backend so browser cookies stay
+  same-origin.
+- **Backend (Render)** — blueprint in `render.yaml` (service root `backend/`). On start it runs
+  `alembic upgrade head`, `python seed.py` (idempotent) and uvicorn on `$PORT`. Health check:
+  `GET /health`. Set `DATABASE_URL` (Neon `postgresql+asyncpg://…?sslmode=require`),
+  `CORS_ORIGINS` (frontend domain) and a strong generated `SECRET_KEY`.
+- **Database (Neon PostgreSQL)** — serverless Postgres; connection string configured only via
+  environment variables, never committed. Uploaded files on Render's free tier are ephemeral
+  (stored on the instance disk), so attachments uploaded before a service restart may need
+  re-uploading; the database itself is persistent.
