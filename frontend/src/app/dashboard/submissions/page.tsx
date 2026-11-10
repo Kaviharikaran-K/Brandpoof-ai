@@ -133,7 +133,7 @@ export default function SubmissionsPage() {
                   <Td>
                     <Link
                       href={`/dashboard/submissions/${row.id}`}
-                      className="font-medium text-teal hover:underline"
+                      className="font-medium text-teal-dark hover:underline"
                     >
                       {row.title}
                     </Link>

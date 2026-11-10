@@ -42,11 +42,11 @@ const RANGES = [
   { value: "all", label: "All time" },
 ];
 
-const TEAL = "#0F766E";
-const INK = "#14213D";
+const TEAL = "#4FB28F";
+const INK = "#515654";
 const AMBER = "#B54708";
 const RED = "#B4232A";
-const HAIRLINE = "#E4E0D5";
+const HAIRLINE = "#D5DDD7";
 
 const TOOLTIP_STYLE = {
   background: "#ffffff",
@@ -308,13 +308,13 @@ export default function AnalyticsPage() {
                     <CartesianGrid stroke={HAIRLINE} strokeDasharray="2 4" vertical={false} />
                     <XAxis
                       dataKey="label"
-                      tick={{ fontSize: 10, fill: "#5B6478" }}
+                      tick={{ fontSize: 10, fill: "#6E7473" }}
                       axisLine={{ stroke: HAIRLINE }}
                       tickLine={false}
                       interval={trendAxis}
                     />
                     <YAxis
-                      tick={{ fontSize: 10, fill: "#5B6478" }}
+                      tick={{ fontSize: 10, fill: "#6E7473" }}
                       axisLine={false}
                       tickLine={false}
                       allowDecimals={false}
@@ -369,7 +369,7 @@ export default function AnalyticsPage() {
                         ? AMBER
                         : severity === "Minor"
                           ? TEAL
-                          : "#8A93A6";
+                          : "#8D9390";
                   return (
                     <li key={severity}>
                       <div className="mb-1 flex items-center justify-between text-[11px]">
@@ -416,7 +416,7 @@ export default function AnalyticsPage() {
                       <CartesianGrid stroke={HAIRLINE} strokeDasharray="2 4" horizontal={false} />
                       <XAxis
                         type="number"
-                        tick={{ fontSize: 10, fill: "#5B6478" }}
+                        tick={{ fontSize: 10, fill: "#6E7473" }}
                         axisLine={false}
                         tickLine={false}
                         allowDecimals={false}
@@ -425,7 +425,7 @@ export default function AnalyticsPage() {
                         type="category"
                         dataKey="label"
                         width={150}
-                        tick={{ fontSize: 10, fill: "#14213D" }}
+                        tick={{ fontSize: 10, fill: "#515654" }}
                         axisLine={false}
                         tickLine={false}
                       />
@@ -481,13 +481,13 @@ export default function AnalyticsPage() {
                     <CartesianGrid stroke={HAIRLINE} strokeDasharray="2 4" vertical={false} />
                     <XAxis
                       dataKey="label"
-                      tick={{ fontSize: 10, fill: "#5B6478" }}
+                      tick={{ fontSize: 10, fill: "#6E7473" }}
                       axisLine={{ stroke: HAIRLINE }}
                       tickLine={false}
                       interval={trendAxis}
                     />
                     <YAxis
-                      tick={{ fontSize: 10, fill: "#5B6478" }}
+                      tick={{ fontSize: 10, fill: "#6E7473" }}
                       axisLine={false}
                       tickLine={false}
                       allowDecimals={false}

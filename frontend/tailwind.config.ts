@@ -5,29 +5,29 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
-        paper: "#F7F5F0",
+        paper: "#EBF0EA",
         ink: {
-          DEFAULT: "#14213D",
-          soft: "#5B6478",
-          faint: "#8A93A6",
+          DEFAULT: "#515654",
+          soft: "#6E7473",
+          faint: "#8D9390",
         },
-        hairline: "#E4E0D5",
+        hairline: "#D5DDD7",
         teal: {
-          DEFAULT: "#0F766E",
-          dark: "#0B5D56",
-          wash: "#E6F2F0",
+          DEFAULT: "#4FB28F",
+          dark: "#276B52",
+          wash: "#E4F3EC",
         },
         red: {
           brand: "#B4232A",
-          wash: "#F9ECEC",
+          wash: "#F8E9E9",
         },
         amber: {
           brand: "#B54708",
-          wash: "#FBF0E3",
+          wash: "#FBF0E2",
         },
       },
       fontFamily: {
-        serif: ["var(--font-serif)", "Georgia", "serif"],
+        serif: ["var(--font-sans)", "Segoe UI", "sans-serif"],
         sans: ["var(--font-sans)", "Segoe UI", "sans-serif"],
         mono: ["var(--font-mono)", "Consolas", "monospace"],
       },

@@ -138,7 +138,7 @@ export function SubmissionDetailView({
   if (error) {
     return (
       <div>
-        <Link href={backHref} className="mb-3 inline-flex items-center gap-1 text-[12px] text-teal">
+        <Link href={backHref} className="mb-3 inline-flex items-center gap-1 text-[12px] text-teal-dark">
           <ArrowLeft className="h-3.5 w-3.5" aria-hidden /> Back
         </Link>
         <ErrorNote>{error}</ErrorNote>
@@ -171,7 +171,7 @@ export function SubmissionDetailView({
 
   return (
     <div>
-      <Link href={backHref} className="mb-3 inline-flex items-center gap-1 text-[12px] text-teal">
+      <Link href={backHref} className="mb-3 inline-flex items-center gap-1 text-[12px] text-teal-dark">
         <ArrowLeft className="h-3.5 w-3.5" aria-hidden /> Back
       </Link>
 

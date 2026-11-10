@@ -11,17 +11,17 @@ body {
 }
 
 ::selection {
-  background: rgba(15, 118, 110, 0.18);
+  background: rgba(79, 178, 143, 0.28);
 }
 
 :where(a, button, input, select, textarea, [tabindex]):focus-visible {
-  outline: 2px solid #0f766e;
+  outline: 2px solid #276b52;
   outline-offset: 2px;
   border-radius: 4px;
 }
 
 .skeleton {
-  @apply animate-pulse rounded bg-[#E9E5DA];
+  @apply animate-pulse rounded bg-[#DCE4DE];
 }
 
 @keyframes toast-in {
@@ -65,13 +65,13 @@ mark.finding-major {
 }
 
 mark.finding-minor {
-  background: rgba(15, 118, 110, 0.12);
-  border-bottom: 2px solid #0f766e;
+  background: rgba(79, 178, 143, 0.16);
+  border-bottom: 2px solid #276b52;
 }
 
 mark.finding-info {
-  background: rgba(91, 100, 120, 0.12);
-  border-bottom: 1px solid #8a93a6;
+  background: rgba(141, 147, 144, 0.16);
+  border-bottom: 1px solid #8d9390;
 }
 
 mark.finding-clarification {
@@ -79,6 +79,6 @@ mark.finding-clarification {
 }
 
 mark.finding-active {
-  outline: 2px solid #14213d;
+  outline: 2px solid #515654;
   outline-offset: 1px;
 }

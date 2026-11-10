@@ -77,7 +77,7 @@ export default function ReviseSubmissionPage() {
   if (error && !detail) {
     return (
       <div>
-        <Link href={`/dashboard/submissions/${id}`} className="mb-3 inline-flex items-center gap-1 text-[12px] text-teal">
+        <Link href={`/dashboard/submissions/${id}`} className="mb-3 inline-flex items-center gap-1 text-[12px] text-teal-dark">
           <ArrowLeft className="h-3.5 w-3.5" aria-hidden /> Back
         </Link>
         <ErrorNote>{error}</ErrorNote>
@@ -104,7 +104,7 @@ export default function ReviseSubmissionPage() {
   if (!canEdit || closed) {
     return (
       <div>
-        <Link href={`/dashboard/submissions/${id}`} className="mb-3 inline-flex items-center gap-1 text-[12px] text-teal">
+        <Link href={`/dashboard/submissions/${id}`} className="mb-3 inline-flex items-center gap-1 text-[12px] text-teal-dark">
           <ArrowLeft className="h-3.5 w-3.5" aria-hidden /> Back
         </Link>
         <ErrorNote>
@@ -118,7 +118,7 @@ export default function ReviseSubmissionPage() {
 
   return (
     <div>
-      <Link href={`/dashboard/submissions/${id}`} className="mb-3 inline-flex items-center gap-1 text-[12px] text-teal">
+      <Link href={`/dashboard/submissions/${id}`} className="mb-3 inline-flex items-center gap-1 text-[12px] text-teal-dark">
         <ArrowLeft className="h-3.5 w-3.5" aria-hidden /> Back to submission
       </Link>
 

@@ -80,7 +80,7 @@ export default function LoginPage() {
 
           <p className="mt-4 border-t border-hairline pt-4 text-center text-[13px] text-ink-soft">
             No account yet?{" "}
-            <Link href="/register" className="text-teal hover:underline">
+            <Link href="/register" className="text-teal-dark hover:underline">
               Create one
             </Link>
           </p>

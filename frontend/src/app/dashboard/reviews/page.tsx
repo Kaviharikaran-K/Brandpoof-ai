@@ -88,7 +88,7 @@ export default function ReviewsPage() {
             {queue.map((row) => (
               <tr key={row.id}>
                 <Td>
-                  <Link href={`/dashboard/reviews/${row.id}`} className="font-medium text-teal hover:underline">
+                  <Link href={`/dashboard/reviews/${row.id}`} className="font-medium text-teal-dark hover:underline">
                     {row.title}
                   </Link>
                 </Td>
@@ -133,7 +133,7 @@ export default function ReviewsPage() {
             {decided.map((row) => (
               <tr key={row.id}>
                 <Td>
-                  <Link href={`/dashboard/reviews/${row.id}`} className="font-medium text-teal hover:underline">
+                  <Link href={`/dashboard/reviews/${row.id}`} className="font-medium text-teal-dark hover:underline">
                     {row.title}
                   </Link>
                 </Td>

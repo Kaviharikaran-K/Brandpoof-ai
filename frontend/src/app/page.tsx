@@ -31,7 +31,7 @@ export default function LandingPage() {
 
       <main className="mx-auto w-full max-w-5xl flex-1 px-6">
         <section className="border-b border-hairline py-16">
-          <p className="mb-3 font-mono text-[12px] uppercase tracking-widest text-teal">
+          <p className="mb-3 font-mono text-[12px] uppercase tracking-widest text-teal-dark">
             Verify · Explain · Improve · Human approval
           </p>
           <h1 className="max-w-2xl font-serif text-[40px] leading-[1.15] text-ink">
@@ -98,7 +98,7 @@ export default function LandingPage() {
               ["Decision", "A reviewer approves, rejects or requests changes. Every step is audited."],
             ].map(([step, text], i) => (
               <li key={step} className="flex items-baseline gap-4 py-3">
-                <span className="font-mono text-[12px] text-teal">{String(i + 1).padStart(2, "0")}</span>
+                <span className="font-mono text-[12px] text-teal-dark">{String(i + 1).padStart(2, "0")}</span>
                 <span className="w-32 font-serif text-[15px] text-ink">{step}</span>
                 <span className="flex-1 text-[13px] text-ink-soft">{text}</span>
               </li>

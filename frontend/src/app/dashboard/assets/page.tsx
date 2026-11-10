@@ -51,7 +51,7 @@ export default function AssetsPage() {
   async function handleAddColour(e: React.FormEvent) {
     e.preventDefault();
     if (!/^#[0-9A-Fa-f]{6}$/.test(colourValue)) {
-      toast.error("Colour must be a 6-digit hex value like #0F766E");
+      toast.error("Colour must be a 6-digit hex value like #4FB28F");
       return;
     }
     setSavingColour(true);
@@ -148,7 +148,7 @@ export default function AssetsPage() {
                   id="colour-value"
                   value={colourValue}
                   onChange={(e) => setColourValue(e.target.value)}
-                  placeholder="#0F766E"
+                  placeholder="#4FB28F"
                   className="font-mono"
                   required
                 />

@@ -25,10 +25,10 @@ export function Button({
     "inline-flex items-center justify-center gap-1.5 rounded border font-medium transition-colors disabled:cursor-not-allowed disabled:opacity-60";
   const sizes = size === "sm" ? "px-2.5 py-1 text-[12px]" : "px-3.5 py-2 text-[13px]";
   const variants: Record<ButtonVariant, string> = {
-    primary: "border-teal-dark bg-teal text-white hover:bg-teal-dark",
+    primary: "border-teal-dark bg-teal-dark text-white hover:bg-ink",
     secondary: "border-hairline bg-white text-ink hover:border-ink-faint",
     danger: "border-red-brand/40 bg-white text-red-brand hover:bg-red-wash",
-    ghost: "border-transparent bg-transparent text-teal hover:underline",
+    ghost: "border-transparent bg-transparent text-teal-dark hover:underline",
   };
   return (
     <button
