@@ -10,6 +10,17 @@ every finding cites the record that produced it, and only a human reviewer can a
 
 > All demo data is fictional (NovaTech Solutions / NovaCloud).
 
+## Live deployment
+
+| Tier     | URL                                              |
+| -------- | ------------------------------------------------ |
+| Frontend | https://brandproof-ai.vercel.app                 |
+| Backend  | https://brandproof-ai-j8yk.onrender.com (`/docs` for Swagger UI, `/health` for status) |
+| Database | Neon PostgreSQL (managed via Render env vars)   |
+
+Demo accounts (see below) work on the live frontend. The Render free tier sleeps when idle,
+so the first request after a pause can take ~30–60 s to wake the backend.
+
 ## Principles
 
 1. **No evidence, no claim.** Pending, expired or conflicting facts never count as proof — the
@@ -216,6 +227,9 @@ humans; OCR depends on a local Tesseract binary; the external LLM provider is an
 there is no password-reset or email-verification flow.
 
 ## Production deployment
+
+Current live deployment: frontend https://brandproof-ai.vercel.app, backend
+https://brandproof-ai-j8yk.onrender.com.
 
 - **Frontend (Vercel)** — project root `frontend/`. Set env var `BACKEND_URL` to the Render
   backend URL; Next.js rewrites proxy `/api/*` to the backend so browser cookies stay
