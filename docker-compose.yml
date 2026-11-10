@@ -1,0 +1,21 @@
+services:
+  postgres:
+    image: postgres:16-alpine
+    container_name: brandproof-postgres
+    environment:
+      POSTGRES_USER: brandproof
+      POSTGRES_PASSWORD: brandproof
+      POSTGRES_DB: brandproof
+    ports:
+      - "5432:5432"
+    volumes:
+      - brandproof_pgdata:/var/lib/postgresql/data
+      - ./database/init.sql:/docker-entrypoint-initdb.d/init.sql:ro
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U brandproof -d brandproof"]
+      interval: 5s
+      timeout: 5s
+      retries: 10
+
+volumes:
+  brandproof_pgdata:

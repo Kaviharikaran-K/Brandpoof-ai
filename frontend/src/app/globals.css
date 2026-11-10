@@ -1,0 +1,84 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html {
+  color-scheme: light;
+}
+
+body {
+  @apply bg-paper text-ink font-sans text-[15px] antialiased;
+}
+
+::selection {
+  background: rgba(15, 118, 110, 0.18);
+}
+
+:where(a, button, input, select, textarea, [tabindex]):focus-visible {
+  outline: 2px solid #0f766e;
+  outline-offset: 2px;
+  border-radius: 4px;
+}
+
+.skeleton {
+  @apply animate-pulse rounded bg-[#E9E5DA];
+}
+
+@keyframes toast-in {
+  from {
+    opacity: 0;
+    transform: translateY(6px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.toast-item {
+  animation: toast-in 160ms ease-out;
+}
+
+.hatched {
+  background-image: repeating-linear-gradient(
+    45deg,
+    transparent,
+    transparent 5px,
+    rgba(180, 35, 42, 0.14) 5px,
+    rgba(180, 35, 42, 0.14) 7px
+  );
+}
+
+mark {
+  color: inherit;
+  background: transparent;
+}
+
+mark.finding-critical {
+  background: rgba(180, 35, 42, 0.14);
+  border-bottom: 2px solid #b4232a;
+}
+
+mark.finding-major {
+  background: rgba(181, 71, 8, 0.14);
+  border-bottom: 2px solid #b54708;
+}
+
+mark.finding-minor {
+  background: rgba(15, 118, 110, 0.12);
+  border-bottom: 2px solid #0f766e;
+}
+
+mark.finding-info {
+  background: rgba(91, 100, 120, 0.12);
+  border-bottom: 1px solid #8a93a6;
+}
+
+mark.finding-clarification {
+  border-bottom: 2px dashed #b4232a;
+}
+
+mark.finding-active {
+  outline: 2px solid #14213d;
+  outline-offset: 1px;
+}
